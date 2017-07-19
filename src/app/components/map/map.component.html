@@ -5,6 +5,6 @@
     </ngui-map>
   </div>
   <div class="right-nav">
-    <app-point-navigation [points]="softwareCompanies" (onPointChanged)="handlePointChanged($event)" [(selectedPoint)]="currentPoint"></app-point-navigation>
+    <app-point-navigation [points]="points | async" (onPointChanged)="handlePointChanged($event)" [(selectedPoint)]="currentPoint"></app-point-navigation>
   </div>
 </div>
