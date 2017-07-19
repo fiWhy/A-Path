@@ -8,7 +8,7 @@ import software from "./points";
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  private softwareCompanies: Set<Point> = software;
+  softwareCompanies: Set<Point> = software;
   constructor() { }
 
   ngOnInit() {

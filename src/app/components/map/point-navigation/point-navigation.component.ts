@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Point } from "../point";
 
 @Component({
   selector: 'app-point-navigation',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./point-navigation.component.scss']
 })
 export class PointNavigationComponent implements OnInit {
-
+  @Input() points: Point[] = [];
   constructor() { }
 
   ngOnInit() {
