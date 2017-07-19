@@ -6,11 +6,13 @@ import { GoogleMapsConfig } from "./config/googlemaps.config";
 
 import { AppComponent } from './app.component';
 import { MapComponent } from './components/map/map.component';
+import { PointNavigationComponent } from './components/map/point-navigation/point-navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    PointNavigationComponent
   ],
   imports: [
     BrowserModule,
