@@ -9,14 +9,17 @@ import { Point } from "../point";
 export class PointNavigationComponent implements OnInit {
   @Input() points: Point[] = [];
   @Output() onPointChanged = new EventEmitter();
-
+  @Input() selectedPoint: Point;
+  @Output() selectedPointChange = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
   handlePointChanged(point) {
-    this.onPointChanged.emit(point);
+    this.selectedPoint = point;
+    this.selectedPointChange.emit(this.selectedPoint);
+    this.onPointChanged.emit(this.selectedPoint);
   }
 
 }

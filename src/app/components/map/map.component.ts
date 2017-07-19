@@ -9,6 +9,7 @@ import software from "./points";
 })
 export class MapComponent implements OnInit {
   softwareCompanies: Set<Point> = software;
+  currentPoint: Point;
   constructor() { }
 
   ngOnInit() {
