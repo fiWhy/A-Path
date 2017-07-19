@@ -14,4 +14,7 @@ export class MapComponent implements OnInit {
   ngOnInit() {
   }
 
+  handlePointChanged(point: Point) {
+    console.log("Resolved point", point);
+  }
 }

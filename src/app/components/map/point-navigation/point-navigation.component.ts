@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Point } from "../point";
 
 @Component({
@@ -8,9 +8,15 @@ import { Point } from "../point";
 })
 export class PointNavigationComponent implements OnInit {
   @Input() points: Point[] = [];
+  @Output() onPointChanged = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handlePointChanged(point) {
+    this.onPointChanged.emit(point);
   }
 
 }
