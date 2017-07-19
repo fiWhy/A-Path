@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Point } from "./point";
 import software from "./points";
 
@@ -8,7 +8,7 @@ import software from "./points";
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  softwareCompanies: Set<Point> = software;
+  softwareCompanies: Set<Point> = <any>software;
   currentPoint: Point;
   constructor() { }
 
@@ -16,6 +16,10 @@ export class MapComponent implements OnInit {
   }
 
   handlePointChanged(point: Point) {
-    console.log("Resolved point", point);
+    console.log("Resolved point", this.currentPoint);
+  }
+
+  get currentPositionLatLng() {
+    return [this.currentPoint.lat, this.currentPoint.lng];
   }
 }
