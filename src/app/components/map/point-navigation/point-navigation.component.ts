@@ -17,7 +17,7 @@ export class PointNavigationComponent implements OnInit {
   }
 
   handlePointChanged(point) {
-    this.selectedPoint = point;
+    this.selectedPoint = new Point(point.lat, point.lng, point.title);
     this.selectedPointChange.emit(this.selectedPoint);
     this.onPointChanged.emit(this.selectedPoint);
   }

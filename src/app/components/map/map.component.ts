@@ -8,7 +8,7 @@ import software from "./points";
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  softwareCompanies: Set<Point> = software;
+  softwareCompanies: Set<Point> = <any>software;
   currentPoint: Point;
   constructor() { }
 
