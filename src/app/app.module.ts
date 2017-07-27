@@ -17,6 +17,7 @@ import { BasketItemsComponent } from './components/basket/components/basket-item
 import { BasketNetComponent } from './components/basket/components/basket-net/basket-net.component';
 import { DragDirective } from './directives/drag.directive';
 import { DropDirective } from './directives/drop.directive';
+import { UniquePipe } from './pipes/unique.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DropDirective } from './directives/drop.directive';
     BasketItemsComponent,
     BasketNetComponent,
     DragDirective,
-    DropDirective
+    DropDirective,
+    UniquePipe
   ],
   imports: [
     BrowserModule,

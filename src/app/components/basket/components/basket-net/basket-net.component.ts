@@ -13,6 +13,7 @@ import { Observable } from "rxjs/Observable";
 })
 export class BasketNetComponent implements OnInit {
   public basketNet: BasketNet;
+  public itemsList: BasketItem[] = [];
   constructor(private basketService: BasketService) { }
 
   ngOnInit() {
@@ -22,6 +23,7 @@ export class BasketNetComponent implements OnInit {
   handleDrop(id: number) {
     this.basketService.pickItem(id).subscribe((item: BasketItem) => {
       this.basketNet.item = item;
+      this.itemsList = this.itemsList.concat(item);
     });
   }
 

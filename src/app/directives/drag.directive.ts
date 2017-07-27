@@ -12,7 +12,7 @@ export class DragDirective {
     this.options = options;
   }
 
-  @HostBinding("draggable")
+  @HostBinding()
   get draggable() {
     return true;
   }

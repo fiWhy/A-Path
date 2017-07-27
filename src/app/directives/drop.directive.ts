@@ -8,11 +8,11 @@ export class DropDirective {
   @Output() handleDrop = new EventEmitter();
 
   constructor(private el: ElementRef) { }
-  
+
   @HostListener('dragenter', ['$event'])
   @HostListener('dragover', ['$event'])
   onDragOver(event) {
-      event.preventDefault();
+    event.preventDefault();
   }
 
   @HostListener("drop", ["$event"])
