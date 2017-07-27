@@ -13,6 +13,8 @@ import { PointNavigationComponent } from './components/map/point-navigation/poin
 import { routes } from "./app.routes";
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
+import { BasketItemsComponent } from './components/basket/components/basket-items/basket-items.component';
+import { BasketNetComponent } from './components/basket/components/basket-net/basket-net.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TopNavigationComponent } from './components/top-navigation/top-navigati
     PointNavigationComponent,
     BasketComponent,
     PageNotFoundComponent,
-    TopNavigationComponent
+    TopNavigationComponent,
+    BasketItemsComponent,
+    BasketNetComponent
   ],
   imports: [
     BrowserModule,
