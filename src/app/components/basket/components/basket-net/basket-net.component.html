@@ -1,3 +1,8 @@
-<p>
-  basket-net works!
-</p>
+<div class="basket-net" appDrop (handleDrop)="handleDrop($event)">
+  <span *ngIf="!basketNet.items.length; else elseBlock">Drop Here!</span>
+  <ng-template #elseBlock>
+    <ul>
+      <li *ngFor="let item of basketNet.items" [appDrag]="item.id" class="flex center f-1 column align-center move">{{ item.name }}</li>
+    </ul>
+  </ng-template>
+</div>
