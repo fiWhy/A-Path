@@ -1,5 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+
+html,
+body {
     height: 100%;
     margin: 0px;
 }
+
+.flex {
+    display: flex;
+    &.row {
+        flex-direction: row;
+    }
+    &.column {
+        flex-direction: column;
+    }
+    .p-1 {
+        flex: 1;
+    }
+    .p-2 {
+        flex: 2;
+    }}
