@@ -15,6 +15,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
 import { BasketItemsComponent } from './components/basket/components/basket-items/basket-items.component';
 import { BasketNetComponent } from './components/basket/components/basket-net/basket-net.component';
+import { DragDirective } from './directives/drag.directive';
+import { DropDirective } from './directives/drop.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { BasketNetComponent } from './components/basket/components/basket-net/ba
     PageNotFoundComponent,
     TopNavigationComponent,
     BasketItemsComponent,
-    BasketNetComponent
+    BasketNetComponent,
+    DragDirective,
+    DropDirective
   ],
   imports: [
     BrowserModule,

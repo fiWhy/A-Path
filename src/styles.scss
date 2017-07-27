@@ -5,9 +5,22 @@ body {
     height: 100%;
     margin: 0px;
 }
+.align-center {
+    text-align: center;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.move {
+    cursor: move;
+}
 
 .flex {
     display: flex;
+    &.center {
+        justify-content: center;
+    }
     &.row {
         flex-direction: row;
     }
