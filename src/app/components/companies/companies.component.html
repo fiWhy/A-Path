@@ -18,12 +18,13 @@
         <input id="name" #lng="ngModel" [(ngModel)]="company.lng" name="lng">
       </div>
 
+      <button type="button" (click)="resetCompany()">New company</button>
       <button [disabled]="!companyForm.form.valid" type="submit">Submit</button>
     </form>
   </div>
   <div class="companies-list f-1">
     <ul>
-      <li *ngFor="let company of companies | async">
+      <li (click)="setCompany(company)" *ngFor="let company of companies | async">
         <span class="company-title">{{ company.title }}</span>
         <span class="company-remove" (click)="removeCompany(company)">X</span>
       </li>
