@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { NguiMapModule } from '@ngui/map';
+import { FormsModule }   from '@angular/forms';
 
 import { GoogleMapsConfig } from "./config/googlemaps.config";
 
@@ -43,7 +44,8 @@ import { CompaniesService } from "./services/companies.service";
     NguiMapModule.forRoot({
       apiUrl: `https://maps.google.com/maps/api/js?key=${GoogleMapsConfig.API_KEY}&libraries=${GoogleMapsConfig.LIBRARIES.join(",")}`
     }),
-    RouterModule.forRoot(routes, { })
+    RouterModule.forRoot(routes, { }),
+    FormsModule
   ],
   providers: [CompaniesService],
   bootstrap: [AppComponent]

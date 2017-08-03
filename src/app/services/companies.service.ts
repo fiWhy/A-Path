@@ -22,6 +22,10 @@ export class CompaniesService {
     return Promise.resolve(this._companies);
   }
 
+  set company(company: Company) {
+    this._companies.push(company);
+  }
+
   removeCompany(company: Company) {
     this._companies.splice(this._companies.indexOf(company), 1);
   }

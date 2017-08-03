@@ -12,6 +12,10 @@ export class CompaniesService {
     return this.globalCompaniesService.companies;
   }
 
+  addCompany(company: Company) {
+    this.globalCompaniesService.company = company;
+  }
+
   removeCompany(company: Company) {
     this.globalCompaniesService.removeCompany(company);
   }

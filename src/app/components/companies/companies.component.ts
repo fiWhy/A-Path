@@ -9,14 +9,20 @@ import { Company } from "../../entities/company";
 })
 export class CompaniesComponent implements OnInit {
   companies: Promise<Company[]>;
+  company: Company;
   constructor(private companiesService: CompaniesService) { }
 
   ngOnInit() {
+    this.company = new Company(null, null, "");
     this.companies = this.companiesService.getCompanies();
   }
 
   removeCompany(company: Company) {
     this.companiesService.removeCompany(company);
+  }
+
+  onSubmit() {
+    this.companiesService.addCompany(this.company);
   }
 
 }
