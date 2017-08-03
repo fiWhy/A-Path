@@ -1,3 +1,13 @@
 <div class="companies flex row">
-  Companies
+  <div class="companies-form f-1">
+    Hello
+  </div>
+  <div class="companies-list f-1">
+    <ul>
+      <li *ngFor="let company of companies | async">
+        <span class="company-title">{{ company.title }}</span>
+        <span class="company-remove" (click)="removeCompany(company)">X</span>
+      </li>
+    </ul>
+  </div>
 </div>
