@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Point } from "../point";
+import { Company } from "../../../entities/company";
 
 @Component({
   selector: 'app-point-navigation',
@@ -7,9 +7,9 @@ import { Point } from "../point";
   styleUrls: ['./point-navigation.component.scss']
 })
 export class PointNavigationComponent implements OnInit {
-  @Input() points: Point[] = [];
+  @Input() points: Company[] = [];
   @Output() onPointChanged = new EventEmitter();
-  @Input() selectedPoint: Point;
+  @Input() selectedPoint: Company;
   @Output() selectedPointChange = new EventEmitter();
   constructor() { }
 
@@ -17,7 +17,7 @@ export class PointNavigationComponent implements OnInit {
   }
 
   handlePointChanged(point) {
-    this.selectedPoint = new Point(point.lat, point.lng, point.title);
+    this.selectedPoint = new Company(point.lat, point.lng, point.title);
     this.selectedPointChange.emit(this.selectedPoint);
     this.onPointChanged.emit(this.selectedPoint);
   }

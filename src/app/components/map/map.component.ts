@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MapService } from "./map.service";
-import { Point } from "./point";
+import { Company } from "../../entities/company";
 import { Observable } from "rxjs/Observable";
 
 @Component({
@@ -10,8 +10,8 @@ import { Observable } from "rxjs/Observable";
   providers: [MapService]
 })
 export class MapComponent implements OnInit {
-  points: Promise<Point[]>;
-  currentPoint: Point;
+  points: Promise<Company[]>;
+  currentPoint: Company;
   constructor(private mapService: MapService) { 
     this.points = mapService.points;
     console.log(this.points);
@@ -20,7 +20,7 @@ export class MapComponent implements OnInit {
   ngOnInit() {
   }
 
-  handlePointChanged(point: Point) {
+  handlePointChanged(point: Company) {
     console.log("Resolved point", point);
   }
 }

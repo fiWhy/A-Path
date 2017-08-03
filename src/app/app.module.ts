@@ -18,6 +18,10 @@ import { BasketNetComponent } from './components/basket/components/basket-net/ba
 import { DragDirective } from './directives/drag.directive';
 import { DropDirective } from './directives/drop.directive';
 import { UniquePipe } from './pipes/unique.pipe';
+import { CompaniesComponent } from './components/companies/companies.component';
+
+
+import { CompaniesService } from "./services/companies.service";
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { UniquePipe } from './pipes/unique.pipe';
     BasketNetComponent,
     DragDirective,
     DropDirective,
-    UniquePipe
+    UniquePipe,
+    CompaniesComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,7 @@ import { UniquePipe } from './pipes/unique.pipe';
     }),
     RouterModule.forRoot(routes, { })
   ],
-  providers: [],
+  providers: [CompaniesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

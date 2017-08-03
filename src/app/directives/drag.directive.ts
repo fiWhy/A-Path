@@ -21,5 +21,4 @@ export class DragDirective {
   onDragStart(event) {
     event.dataTransfer.setData("options", this.options);
   }
-
 }
