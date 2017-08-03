@@ -4,7 +4,7 @@
     <form (submit)="onSubmit()" [formGroup]="companyForm">
       <div>
         <label for="name">Company name</label>
-        <input id="name" required formControlName="name">
+        <input id="name" required formControlName="name" appOnlyEnglish>
         <div [hidden]="companyForm.controls.name.valid || companyForm.controls.name.pristine">
           Name is required
         </div>

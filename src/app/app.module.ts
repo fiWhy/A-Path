@@ -23,6 +23,7 @@ import { CompaniesComponent } from './components/companies/companies.component';
 
 
 import { CompaniesService } from "./services/companies.service";
+import { OnlyEnglishDirective } from './components/companies/validators/only-english.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CompaniesService } from "./services/companies.service";
     DragDirective,
     DropDirective,
     UniquePipe,
-    CompaniesComponent
+    CompaniesComponent,
+    OnlyEnglishDirective
   ],
   imports: [
     BrowserModule,
