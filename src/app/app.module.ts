@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { NguiMapModule } from '@ngui/map';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { GoogleMapsConfig } from "./config/googlemaps.config";
 
@@ -45,7 +45,8 @@ import { CompaniesService } from "./services/companies.service";
       apiUrl: `https://maps.google.com/maps/api/js?key=${GoogleMapsConfig.API_KEY}&libraries=${GoogleMapsConfig.LIBRARIES.join(",")}`
     }),
     RouterModule.forRoot(routes, { }),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [CompaniesService],
   bootstrap: [AppComponent]

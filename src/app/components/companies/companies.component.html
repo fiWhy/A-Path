@@ -1,25 +1,25 @@
 <div class="companies flex row">
   <div class="companies-form f-1">
     <h1>Set company</h1>
-    <form (submit)="onSubmit()" #companyForm="ngForm">
+    <form (submit)="onSubmit()" [formGroup]="companyForm">
       <div>
         <label for="name">Company name</label>
-        <input id="name" required #name="ngModel" [(ngModel)]="company.title" name="name">
-        <div [hidden]="name.valid || name.pristine">
+        <input id="name" required formControlName="name">
+        <div [hidden]="companyForm.controls.name.valid || companyForm.controls.name.pristine">
           Name is required
         </div>
       </div>
       <div>
-        <label for="name">Company lat</label>
-        <input id="name" #lat="ngModel" [(ngModel)]="company.lat" name="lat">
+        <label for="lat">Company lat</label>
+        <input id="lat" formControlName="lat">
       </div>
       <div>
-        <label for="name">Company lng</label>
-        <input id="name" #lng="ngModel" [(ngModel)]="company.lng" name="lng">
+        <label for="lng">Company lng</label>
+        <input id="lng" formControlName="lng">
       </div>
 
       <button type="button" (click)="resetCompany()">New company</button>
-      <button [disabled]="!companyForm.form.valid" type="submit">Submit</button>
+      <button [disabled]="!companyForm.valid" type="submit">Submit</button>
     </form>
   </div>
   <div class="companies-list f-1">
